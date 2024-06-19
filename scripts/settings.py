@@ -4,3 +4,6 @@ FPS = 0  # 0 - unlimited
 COLORS = {
     "background": (223, 223, 203)
 }
+
+# Game settings
+CHUNK_SIZE = 16

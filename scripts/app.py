@@ -80,6 +80,18 @@ class App:
         # -*-*- Rendering Block -*-*-
         self.screen.fill(self.colors['background'])  # Fill background
 
+        self.field.draw(self.screen, self.camera)
+        self.field.create_chunk((-1, -1))
+        self.field.create_chunk((0, -1))
+        self.field.create_chunk((1, -1))
+        self.field.create_chunk((-1, 0))
+        self.field.create_chunk((0, 0))
+        self.field.create_chunk((1, 0))
+        self.field.create_chunk((-1, 1))
+        self.field.create_chunk((0, 1))
+        self.field.create_chunk((1, 1))
+
+
         self.camera.draw_map_scale(self.screen, offset=(140, 15))  # Draw map scale
         Text("FPS: " + str(int(self.clock.get_fps())), (0, 0, 0), 20).print(self.screen,
                                                                             (self.width - 70, self.height - 21),
